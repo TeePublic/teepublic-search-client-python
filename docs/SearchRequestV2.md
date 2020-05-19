@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **explain** | **bool** | whether to return explanation of search results. | [optional] [default to False]
 **es_explain** | **bool** | whether to return elasticsearch explanation of search results. | [optional] [default to False]
 **relevancy_config_id** | **str** | Relevancy config id. | [optional] 
+**bucket** | **str** | AB test bucket. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
