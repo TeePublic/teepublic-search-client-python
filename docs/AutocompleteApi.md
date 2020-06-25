@@ -32,7 +32,7 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.AutocompleteApi(swagger_client.ApiClient(configuration))
 prefix = 'prefix_example' # str | search prefix
-limit = 15 # int | Number of results to return. (optional) (default to 15)
+limit = 6 # int | Number of results to return. (optional) (default to 6)
 explain = false # bool | Whether to return explanation of results. (optional) (default to false)
 
 try:
@@ -48,7 +48,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prefix** | **str**| search prefix | 
- **limit** | **int**| Number of results to return. | [optional] [default to 15]
+ **limit** | **int**| Number of results to return. | [optional] [default to 6]
  **explain** | **bool**| Whether to return explanation of results. | [optional] [default to false]
 
 ### Return type
