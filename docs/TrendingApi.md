@@ -23,8 +23,14 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: api_key
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.TrendingApi()
+api_instance = swagger_client.TrendingApi(swagger_client.ApiClient(configuration))
 
 try:
     # Gets trending search results.
@@ -43,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
