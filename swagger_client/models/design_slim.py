@@ -33,20 +33,38 @@ class DesignSlim(object):
     swagger_types = {
         'id': 'int',
         'title': 'str',
+        'primary_tag': 'str',
+        'primary_related_tags': 'list[str]',
+        'secondary_tags': 'list[str]',
+        'lifetime_sales': 'int',
+        'monthly_sales': 'int',
+        'weekly_sales': 'int',
         'explanation': 'object'
     }
 
     attribute_map = {
         'id': 'id',
         'title': 'title',
+        'primary_tag': 'primary_tag',
+        'primary_related_tags': 'primary_related_tags',
+        'secondary_tags': 'secondary_tags',
+        'lifetime_sales': 'lifetime_sales',
+        'monthly_sales': 'monthly_sales',
+        'weekly_sales': 'weekly_sales',
         'explanation': 'explanation'
     }
 
-    def __init__(self, id=None, title=None, explanation=None):  # noqa: E501
+    def __init__(self, id=None, title=None, primary_tag=None, primary_related_tags=None, secondary_tags=None, lifetime_sales=None, monthly_sales=None, weekly_sales=None, explanation=None):  # noqa: E501
         """DesignSlim - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._title = None
+        self._primary_tag = None
+        self._primary_related_tags = None
+        self._secondary_tags = None
+        self._lifetime_sales = None
+        self._monthly_sales = None
+        self._weekly_sales = None
         self._explanation = None
         self.discriminator = None
 
@@ -54,6 +72,18 @@ class DesignSlim(object):
             self.id = id
         if title is not None:
             self.title = title
+        if primary_tag is not None:
+            self.primary_tag = primary_tag
+        if primary_related_tags is not None:
+            self.primary_related_tags = primary_related_tags
+        if secondary_tags is not None:
+            self.secondary_tags = secondary_tags
+        if lifetime_sales is not None:
+            self.lifetime_sales = lifetime_sales
+        if monthly_sales is not None:
+            self.monthly_sales = monthly_sales
+        if weekly_sales is not None:
+            self.weekly_sales = weekly_sales
         if explanation is not None:
             self.explanation = explanation
 
@@ -102,6 +132,144 @@ class DesignSlim(object):
         """
 
         self._title = title
+
+    @property
+    def primary_tag(self):
+        """Gets the primary_tag of this DesignSlim.  # noqa: E501
+
+        design primary tag.  # noqa: E501
+
+        :return: The primary_tag of this DesignSlim.  # noqa: E501
+        :rtype: str
+        """
+        return self._primary_tag
+
+    @primary_tag.setter
+    def primary_tag(self, primary_tag):
+        """Sets the primary_tag of this DesignSlim.
+
+        design primary tag.  # noqa: E501
+
+        :param primary_tag: The primary_tag of this DesignSlim.  # noqa: E501
+        :type: str
+        """
+
+        self._primary_tag = primary_tag
+
+    @property
+    def primary_related_tags(self):
+        """Gets the primary_related_tags of this DesignSlim.  # noqa: E501
+
+        design primary related tags.  # noqa: E501
+
+        :return: The primary_related_tags of this DesignSlim.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._primary_related_tags
+
+    @primary_related_tags.setter
+    def primary_related_tags(self, primary_related_tags):
+        """Sets the primary_related_tags of this DesignSlim.
+
+        design primary related tags.  # noqa: E501
+
+        :param primary_related_tags: The primary_related_tags of this DesignSlim.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._primary_related_tags = primary_related_tags
+
+    @property
+    def secondary_tags(self):
+        """Gets the secondary_tags of this DesignSlim.  # noqa: E501
+
+        design secondary tags.  # noqa: E501
+
+        :return: The secondary_tags of this DesignSlim.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._secondary_tags
+
+    @secondary_tags.setter
+    def secondary_tags(self, secondary_tags):
+        """Sets the secondary_tags of this DesignSlim.
+
+        design secondary tags.  # noqa: E501
+
+        :param secondary_tags: The secondary_tags of this DesignSlim.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._secondary_tags = secondary_tags
+
+    @property
+    def lifetime_sales(self):
+        """Gets the lifetime_sales of this DesignSlim.  # noqa: E501
+
+        total lifetime sales  # noqa: E501
+
+        :return: The lifetime_sales of this DesignSlim.  # noqa: E501
+        :rtype: int
+        """
+        return self._lifetime_sales
+
+    @lifetime_sales.setter
+    def lifetime_sales(self, lifetime_sales):
+        """Sets the lifetime_sales of this DesignSlim.
+
+        total lifetime sales  # noqa: E501
+
+        :param lifetime_sales: The lifetime_sales of this DesignSlim.  # noqa: E501
+        :type: int
+        """
+
+        self._lifetime_sales = lifetime_sales
+
+    @property
+    def monthly_sales(self):
+        """Gets the monthly_sales of this DesignSlim.  # noqa: E501
+
+        total monthly sales  # noqa: E501
+
+        :return: The monthly_sales of this DesignSlim.  # noqa: E501
+        :rtype: int
+        """
+        return self._monthly_sales
+
+    @monthly_sales.setter
+    def monthly_sales(self, monthly_sales):
+        """Sets the monthly_sales of this DesignSlim.
+
+        total monthly sales  # noqa: E501
+
+        :param monthly_sales: The monthly_sales of this DesignSlim.  # noqa: E501
+        :type: int
+        """
+
+        self._monthly_sales = monthly_sales
+
+    @property
+    def weekly_sales(self):
+        """Gets the weekly_sales of this DesignSlim.  # noqa: E501
+
+        total weekly sales  # noqa: E501
+
+        :return: The weekly_sales of this DesignSlim.  # noqa: E501
+        :rtype: int
+        """
+        return self._weekly_sales
+
+    @weekly_sales.setter
+    def weekly_sales(self, weekly_sales):
+        """Sets the weekly_sales of this DesignSlim.
+
+        total weekly sales  # noqa: E501
+
+        :param weekly_sales: The weekly_sales of this DesignSlim.  # noqa: E501
+        :type: int
+        """
+
+        self._weekly_sales = weekly_sales
 
     @property
     def explanation(self):
