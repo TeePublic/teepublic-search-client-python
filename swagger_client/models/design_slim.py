@@ -36,9 +36,8 @@ class DesignSlim(object):
         'primary_tag': 'str',
         'primary_related_tags': 'list[str]',
         'secondary_tags': 'list[str]',
-        'lifetime_sales': 'int',
-        'monthly_sales': 'int',
-        'weekly_sales': 'int',
+        'sales': 'object',
+        'fam_approved': 'bool',
         'explanation': 'object'
     }
 
@@ -48,13 +47,12 @@ class DesignSlim(object):
         'primary_tag': 'primary_tag',
         'primary_related_tags': 'primary_related_tags',
         'secondary_tags': 'secondary_tags',
-        'lifetime_sales': 'lifetime_sales',
-        'monthly_sales': 'monthly_sales',
-        'weekly_sales': 'weekly_sales',
+        'sales': 'sales',
+        'fam_approved': 'fam_approved',
         'explanation': 'explanation'
     }
 
-    def __init__(self, id=None, title=None, primary_tag=None, primary_related_tags=None, secondary_tags=None, lifetime_sales=None, monthly_sales=None, weekly_sales=None, explanation=None):  # noqa: E501
+    def __init__(self, id=None, title=None, primary_tag=None, primary_related_tags=None, secondary_tags=None, sales=None, fam_approved=None, explanation=None):  # noqa: E501
         """DesignSlim - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -62,9 +60,8 @@ class DesignSlim(object):
         self._primary_tag = None
         self._primary_related_tags = None
         self._secondary_tags = None
-        self._lifetime_sales = None
-        self._monthly_sales = None
-        self._weekly_sales = None
+        self._sales = None
+        self._fam_approved = None
         self._explanation = None
         self.discriminator = None
 
@@ -78,12 +75,10 @@ class DesignSlim(object):
             self.primary_related_tags = primary_related_tags
         if secondary_tags is not None:
             self.secondary_tags = secondary_tags
-        if lifetime_sales is not None:
-            self.lifetime_sales = lifetime_sales
-        if monthly_sales is not None:
-            self.monthly_sales = monthly_sales
-        if weekly_sales is not None:
-            self.weekly_sales = weekly_sales
+        if sales is not None:
+            self.sales = sales
+        if fam_approved is not None:
+            self.fam_approved = fam_approved
         if explanation is not None:
             self.explanation = explanation
 
@@ -203,73 +198,50 @@ class DesignSlim(object):
         self._secondary_tags = secondary_tags
 
     @property
-    def lifetime_sales(self):
-        """Gets the lifetime_sales of this DesignSlim.  # noqa: E501
+    def sales(self):
+        """Gets the sales of this DesignSlim.  # noqa: E501
 
-        total lifetime sales  # noqa: E501
+        sales information  # noqa: E501
 
-        :return: The lifetime_sales of this DesignSlim.  # noqa: E501
-        :rtype: int
+        :return: The sales of this DesignSlim.  # noqa: E501
+        :rtype: object
         """
-        return self._lifetime_sales
+        return self._sales
 
-    @lifetime_sales.setter
-    def lifetime_sales(self, lifetime_sales):
-        """Sets the lifetime_sales of this DesignSlim.
+    @sales.setter
+    def sales(self, sales):
+        """Sets the sales of this DesignSlim.
 
-        total lifetime sales  # noqa: E501
+        sales information  # noqa: E501
 
-        :param lifetime_sales: The lifetime_sales of this DesignSlim.  # noqa: E501
-        :type: int
+        :param sales: The sales of this DesignSlim.  # noqa: E501
+        :type: object
         """
 
-        self._lifetime_sales = lifetime_sales
+        self._sales = sales
 
     @property
-    def monthly_sales(self):
-        """Gets the monthly_sales of this DesignSlim.  # noqa: E501
+    def fam_approved(self):
+        """Gets the fam_approved of this DesignSlim.  # noqa: E501
 
-        total monthly sales  # noqa: E501
+        is the design FAM approved  # noqa: E501
 
-        :return: The monthly_sales of this DesignSlim.  # noqa: E501
-        :rtype: int
+        :return: The fam_approved of this DesignSlim.  # noqa: E501
+        :rtype: bool
         """
-        return self._monthly_sales
+        return self._fam_approved
 
-    @monthly_sales.setter
-    def monthly_sales(self, monthly_sales):
-        """Sets the monthly_sales of this DesignSlim.
+    @fam_approved.setter
+    def fam_approved(self, fam_approved):
+        """Sets the fam_approved of this DesignSlim.
 
-        total monthly sales  # noqa: E501
+        is the design FAM approved  # noqa: E501
 
-        :param monthly_sales: The monthly_sales of this DesignSlim.  # noqa: E501
-        :type: int
-        """
-
-        self._monthly_sales = monthly_sales
-
-    @property
-    def weekly_sales(self):
-        """Gets the weekly_sales of this DesignSlim.  # noqa: E501
-
-        total weekly sales  # noqa: E501
-
-        :return: The weekly_sales of this DesignSlim.  # noqa: E501
-        :rtype: int
-        """
-        return self._weekly_sales
-
-    @weekly_sales.setter
-    def weekly_sales(self, weekly_sales):
-        """Sets the weekly_sales of this DesignSlim.
-
-        total weekly sales  # noqa: E501
-
-        :param weekly_sales: The weekly_sales of this DesignSlim.  # noqa: E501
-        :type: int
+        :param fam_approved: The fam_approved of this DesignSlim.  # noqa: E501
+        :type: bool
         """
 
-        self._weekly_sales = weekly_sales
+        self._fam_approved = fam_approved
 
     @property
     def explanation(self):
