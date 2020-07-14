@@ -29,6 +29,7 @@ from swagger_client.models.es_hits import EsHits
 from swagger_client.models.es_lookup_response import EsLookupResponse
 from swagger_client.models.es_search_response import EsSearchResponse
 from swagger_client.models.explain import Explain
+from swagger_client.models.related_result import RelatedResult
 from swagger_client.models.search_request import SearchRequest
 from swagger_client.models.search_request_v2 import SearchRequestV2
 from swagger_client.models.search_response import SearchResponse
