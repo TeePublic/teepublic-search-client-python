@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
  - [EsLookupResponse](docs/EsLookupResponse.md)
  - [EsSearchResponse](docs/EsSearchResponse.md)
  - [Explain](docs/Explain.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
  - [RelatedResult](docs/RelatedResult.md)
  - [SearchRequest](docs/SearchRequest.md)
  - [SearchRequestV2](docs/SearchRequestV2.md)
