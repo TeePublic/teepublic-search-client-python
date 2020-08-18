@@ -38,6 +38,7 @@ class DesignSlim(object):
         'secondary_tags': 'list[str]',
         'sales': 'object',
         'fam_approved': 'bool',
+        'click_through_rate': 'object',
         'explanation': 'object'
     }
 
@@ -49,10 +50,11 @@ class DesignSlim(object):
         'secondary_tags': 'secondary_tags',
         'sales': 'sales',
         'fam_approved': 'fam_approved',
+        'click_through_rate': 'click_through_rate',
         'explanation': 'explanation'
     }
 
-    def __init__(self, id=None, title=None, primary_tag=None, primary_related_tags=None, secondary_tags=None, sales=None, fam_approved=None, explanation=None):  # noqa: E501
+    def __init__(self, id=None, title=None, primary_tag=None, primary_related_tags=None, secondary_tags=None, sales=None, fam_approved=None, click_through_rate=None, explanation=None):  # noqa: E501
         """DesignSlim - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -62,6 +64,7 @@ class DesignSlim(object):
         self._secondary_tags = None
         self._sales = None
         self._fam_approved = None
+        self._click_through_rate = None
         self._explanation = None
         self.discriminator = None
 
@@ -79,6 +82,8 @@ class DesignSlim(object):
             self.sales = sales
         if fam_approved is not None:
             self.fam_approved = fam_approved
+        if click_through_rate is not None:
+            self.click_through_rate = click_through_rate
         if explanation is not None:
             self.explanation = explanation
 
@@ -242,6 +247,29 @@ class DesignSlim(object):
         """
 
         self._fam_approved = fam_approved
+
+    @property
+    def click_through_rate(self):
+        """Gets the click_through_rate of this DesignSlim.  # noqa: E501
+
+        click through rate information  # noqa: E501
+
+        :return: The click_through_rate of this DesignSlim.  # noqa: E501
+        :rtype: object
+        """
+        return self._click_through_rate
+
+    @click_through_rate.setter
+    def click_through_rate(self, click_through_rate):
+        """Sets the click_through_rate of this DesignSlim.
+
+        click through rate information  # noqa: E501
+
+        :param click_through_rate: The click_through_rate of this DesignSlim.  # noqa: E501
+        :type: object
+        """
+
+        self._click_through_rate = click_through_rate
 
     @property
     def explanation(self):
