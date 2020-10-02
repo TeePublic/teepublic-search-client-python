@@ -8,4 +8,5 @@ from swagger_client.api.lookup_api import LookupApi
 from swagger_client.api.related_api import RelatedApi
 from swagger_client.api.relevancy_api import RelevancyApi
 from swagger_client.api.search_api import SearchApi
+from swagger_client.api.tag_api import TagApi
 from swagger_client.api.trending_api import TrendingApi
