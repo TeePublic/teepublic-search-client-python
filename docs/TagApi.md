@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**get_v1_related_tags**](TagApi.md#get_v1_related_tags) | **GET** /v1/related-tags | Gets related tags based on given term(s)
 [**get_v1_tag_suggestions**](TagApi.md#get_v1_tag_suggestions) | **GET** /v1/tag-suggestions | Returns a list of tag suggestions based on search prefix.
 [**get_v1_tags**](TagApi.md#get_v1_tags) | **GET** /v1/tags | Gets tags data based on name(s)
+[**post_v1_related_tags_cleanup**](TagApi.md#post_v1_related_tags_cleanup) | **POST** /v1/related-tags/cleanup | Removes deleted related tag relationships.
 
 
 # **get_v1_design_tags**
@@ -231,6 +232,59 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_v1_related_tags_cleanup**
+> post_v1_related_tags_cleanup(body)
+
+Removes deleted related tag relationships.
+
+Removes deleted related tag relationships.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.TagApi(swagger_client.ApiClient(configuration))
+body = NULL # object | Include a timestamp field for cleanup.
+
+try:
+    # Removes deleted related tag relationships.
+    api_instance.post_v1_related_tags_cleanup(body)
+except ApiException as e:
+    print("Exception when calling TagApi->post_v1_related_tags_cleanup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **object**| Include a timestamp field for cleanup. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

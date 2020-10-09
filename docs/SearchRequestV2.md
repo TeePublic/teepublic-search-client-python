@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **search_terms** | **str** | Search terms. | [optional] 
 **sort** | **str** | Sort order | [optional] [default to 'relevance']
 **tags_filter** | **list[str]** | Design tags filter. | [optional] 
-**canvas** | **str** | product filter | [optional] 
+**canvases** | **list[str]** | product filter | [optional] 
 **artist_filter** | **list[int]** | artist ids. | [optional] 
 **per_page** | **int** | Number of results to return per page. | [optional] [default to 36]
 **page_offset** | **int** | Page offset to fetch. | [optional] [default to 1]
