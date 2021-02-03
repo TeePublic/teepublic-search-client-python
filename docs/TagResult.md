@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** | id | [optional] 
 **name** | **str** | tag name | [optional] 
 **taggings** | **int** | taggings count | [optional] 
+**linkable_count** | **int** | teepublic approved design taggings count | [optional] 
 **suggestable** | **bool** | suggestable | [optional] 
 **canonical** | **bool** | canonical | [optional] 
 **relatable** | **bool** | relatable | [optional] 
