@@ -139,6 +139,7 @@ class TagApi(object):
 
         :param async_req bool
         :param str tag_list: Tag list to pull from related tags from (required)
+        :param int discoverable_taggings_minimum: minimum number of discoverable taggings required for return
         :param int minimum_taggings: minimum number of taggings required for return
         :param bool include_deleted: Only return tags that are not soft deleted
         :return: RelatedTagResponse
@@ -163,6 +164,7 @@ class TagApi(object):
 
         :param async_req bool
         :param str tag_list: Tag list to pull from related tags from (required)
+        :param int discoverable_taggings_minimum: minimum number of discoverable taggings required for return
         :param int minimum_taggings: minimum number of taggings required for return
         :param bool include_deleted: Only return tags that are not soft deleted
         :return: RelatedTagResponse
@@ -170,7 +172,7 @@ class TagApi(object):
                  returns the request thread.
         """
 
-        all_params = ['tag_list', 'minimum_taggings', 'include_deleted']  # noqa: E501
+        all_params = ['tag_list', 'discoverable_taggings_minimum', 'minimum_taggings', 'include_deleted']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -197,6 +199,8 @@ class TagApi(object):
         query_params = []
         if 'tag_list' in params:
             query_params.append(('tag_list', params['tag_list']))  # noqa: E501
+        if 'discoverable_taggings_minimum' in params:
+            query_params.append(('discoverable_taggings_minimum', params['discoverable_taggings_minimum']))  # noqa: E501
         if 'minimum_taggings' in params:
             query_params.append(('minimum_taggings', params['minimum_taggings']))  # noqa: E501
         if 'include_deleted' in params:

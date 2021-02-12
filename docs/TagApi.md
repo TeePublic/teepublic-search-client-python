@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_v1_related_tags**
-> RelatedTagResponse get_v1_related_tags(tag_list, minimum_taggings=minimum_taggings, include_deleted=include_deleted)
+> RelatedTagResponse get_v1_related_tags(tag_list, discoverable_taggings_minimum=discoverable_taggings_minimum, minimum_taggings=minimum_taggings, include_deleted=include_deleted)
 
 Gets related tags based on given term(s)
 
@@ -88,12 +88,13 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.TagApi(swagger_client.ApiClient(configuration))
 tag_list = 'tag_list_example' # str | Tag list to pull from related tags from
+discoverable_taggings_minimum = 0 # int | minimum number of discoverable taggings required for return (optional) (default to 0)
 minimum_taggings = 0 # int | minimum number of taggings required for return (optional) (default to 0)
 include_deleted = false # bool | Only return tags that are not soft deleted (optional) (default to false)
 
 try:
     # Gets related tags based on given term(s)
-    api_response = api_instance.get_v1_related_tags(tag_list, minimum_taggings=minimum_taggings, include_deleted=include_deleted)
+    api_response = api_instance.get_v1_related_tags(tag_list, discoverable_taggings_minimum=discoverable_taggings_minimum, minimum_taggings=minimum_taggings, include_deleted=include_deleted)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TagApi->get_v1_related_tags: %s\n" % e)
@@ -104,6 +105,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag_list** | **str**| Tag list to pull from related tags from | 
+ **discoverable_taggings_minimum** | **int**| minimum number of discoverable taggings required for return | [optional] [default to 0]
  **minimum_taggings** | **int**| minimum number of taggings required for return | [optional] [default to 0]
  **include_deleted** | **bool**| Only return tags that are not soft deleted | [optional] [default to false]
 
