@@ -142,6 +142,7 @@ class TagApi(object):
         :param int discoverable_taggings_minimum: minimum number of discoverable taggings required for return
         :param int minimum_taggings: minimum number of taggings required for return
         :param bool include_deleted: Only return tags that are not soft deleted
+        :param str bucket: AB test bucket
         :return: RelatedTagResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -167,12 +168,13 @@ class TagApi(object):
         :param int discoverable_taggings_minimum: minimum number of discoverable taggings required for return
         :param int minimum_taggings: minimum number of taggings required for return
         :param bool include_deleted: Only return tags that are not soft deleted
+        :param str bucket: AB test bucket
         :return: RelatedTagResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['tag_list', 'discoverable_taggings_minimum', 'minimum_taggings', 'include_deleted']  # noqa: E501
+        all_params = ['tag_list', 'discoverable_taggings_minimum', 'minimum_taggings', 'include_deleted', 'bucket']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -205,6 +207,8 @@ class TagApi(object):
             query_params.append(('minimum_taggings', params['minimum_taggings']))  # noqa: E501
         if 'include_deleted' in params:
             query_params.append(('include_deleted', params['include_deleted']))  # noqa: E501
+        if 'bucket' in params:
+            query_params.append(('bucket', params['bucket']))  # noqa: E501
 
         header_params = {}
 
