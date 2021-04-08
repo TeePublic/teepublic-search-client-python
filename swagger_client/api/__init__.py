@@ -4,7 +4,6 @@ from __future__ import absolute_import
 
 # import apis into api package
 from swagger_client.api.autocomplete_api import AutocompleteApi
-from swagger_client.api.lookup_api import LookupApi
 from swagger_client.api.related_api import RelatedApi
 from swagger_client.api.relevancy_api import RelevancyApi
 from swagger_client.api.search_api import SearchApi

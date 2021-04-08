@@ -91,8 +91,8 @@ class AutocompleteApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'prefix' is set
-        if ('prefix' not in params or
-                params['prefix'] is None):
+        if self.api_client.client_side_validation and ('prefix' not in params or
+                                                       params['prefix'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `prefix` when calling `get_v1_autocomplete`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class AutocompleteApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
+        if self.api_client.client_side_validation and ('body' not in params or
+                                                       params['body'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `body` when calling `post_v1_autocomplete`")  # noqa: E501
 
         collection_formats = {}

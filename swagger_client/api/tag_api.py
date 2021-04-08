@@ -87,8 +87,8 @@ class TagApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'design_id' is set
-        if ('design_id' not in params or
-                params['design_id'] is None):
+        if self.api_client.client_side_validation and ('design_id' not in params or
+                                                       params['design_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `design_id` when calling `get_v1_design_tags`")  # noqa: E501
 
         collection_formats = {}
@@ -190,8 +190,8 @@ class TagApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'tag_list' is set
-        if ('tag_list' not in params or
-                params['tag_list'] is None):
+        if self.api_client.client_side_validation and ('tag_list' not in params or
+                                                       params['tag_list'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `tag_list` when calling `get_v1_related_tags`")  # noqa: E501
 
         collection_formats = {}
@@ -297,8 +297,8 @@ class TagApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'prefix' is set
-        if ('prefix' not in params or
-                params['prefix'] is None):
+        if self.api_client.client_side_validation and ('prefix' not in params or
+                                                       params['prefix'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `prefix` when calling `get_v1_tag_suggestions`")  # noqa: E501
 
         collection_formats = {}
@@ -396,8 +396,8 @@ class TagApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'tag_names_list' is set
-        if ('tag_names_list' not in params or
-                params['tag_names_list'] is None):
+        if self.api_client.client_side_validation and ('tag_names_list' not in params or
+                                                       params['tag_names_list'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `tag_names_list` when calling `get_v1_tags`")  # noqa: E501
 
         collection_formats = {}
