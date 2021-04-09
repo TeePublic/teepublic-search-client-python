@@ -39,7 +39,6 @@ from swagger_client.models.es_completion_suggest import EsCompletionSuggest
 from swagger_client.models.es_completion_suggest_option import EsCompletionSuggestOption
 from swagger_client.models.es_hit import EsHit
 from swagger_client.models.es_hits import EsHits
-from swagger_client.models.es_lookup_response import EsLookupResponse
 from swagger_client.models.es_search_response import EsSearchResponse
 from swagger_client.models.explain import Explain
 from swagger_client.models.related_response import RelatedResponse

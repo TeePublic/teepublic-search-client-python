@@ -110,7 +110,6 @@ Class | Method | HTTP request | Description
  - [EsCompletionSuggestOption](docs/EsCompletionSuggestOption.md)
  - [EsHit](docs/EsHit.md)
  - [EsHits](docs/EsHits.md)
- - [EsLookupResponse](docs/EsLookupResponse.md)
  - [EsSearchResponse](docs/EsSearchResponse.md)
  - [Explain](docs/Explain.md)
  - [RelatedResponse](docs/RelatedResponse.md)
