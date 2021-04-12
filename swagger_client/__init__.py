@@ -17,7 +17,6 @@ from __future__ import absolute_import
 
 # import apis into sdk package
 from swagger_client.api.autocomplete_api import AutocompleteApi
-from swagger_client.api.lookup_api import LookupApi
 from swagger_client.api.related_api import RelatedApi
 from swagger_client.api.relevancy_api import RelevancyApi
 from swagger_client.api.search_api import SearchApi
@@ -40,7 +39,6 @@ from swagger_client.models.es_completion_suggest import EsCompletionSuggest
 from swagger_client.models.es_completion_suggest_option import EsCompletionSuggestOption
 from swagger_client.models.es_hit import EsHit
 from swagger_client.models.es_hits import EsHits
-from swagger_client.models.es_lookup_response import EsLookupResponse
 from swagger_client.models.es_search_response import EsSearchResponse
 from swagger_client.models.explain import Explain
 from swagger_client.models.related_response import RelatedResponse

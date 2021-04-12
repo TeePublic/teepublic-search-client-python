@@ -87,8 +87,8 @@ class RelevancyApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'config_id' is set
-        if ('config_id' not in params or
-                params['config_id'] is None):
+        if self.api_client.client_side_validation and ('config_id' not in params or
+                                                       params['config_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `config_id` when calling `delete_v1_relevancy_configuration`")  # noqa: E501
 
         collection_formats = {}
@@ -178,8 +178,8 @@ class RelevancyApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'config_id' is set
-        if ('config_id' not in params or
-                params['config_id'] is None):
+        if self.api_client.client_side_validation and ('config_id' not in params or
+                                                       params['config_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `config_id` when calling `get_v1_relevancy_configuration`")  # noqa: E501
 
         collection_formats = {}
@@ -360,8 +360,8 @@ class RelevancyApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
+        if self.api_client.client_side_validation and ('body' not in params or
+                                                       params['body'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `body` when calling `post_v1_relevancy_configurations`")  # noqa: E501
 
         collection_formats = {}
@@ -457,12 +457,12 @@ class RelevancyApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'config_id' is set
-        if ('config_id' not in params or
-                params['config_id'] is None):
+        if self.api_client.client_side_validation and ('config_id' not in params or
+                                                       params['config_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `config_id` when calling `put_v1_relevancy_configuration`")  # noqa: E501
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
+        if self.api_client.client_side_validation and ('body' not in params or
+                                                       params['body'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `body` when calling `put_v1_relevancy_configuration`")  # noqa: E501
 
         collection_formats = {}

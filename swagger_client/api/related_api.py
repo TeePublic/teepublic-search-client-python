@@ -87,8 +87,8 @@ class RelatedApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'search_term' is set
-        if ('search_term' not in params or
-                params['search_term'] is None):
+        if self.api_client.client_side_validation and ('search_term' not in params or
+                                                       params['search_term'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `search_term` when calling `get_v1_related_search`")  # noqa: E501
 
         collection_formats = {}

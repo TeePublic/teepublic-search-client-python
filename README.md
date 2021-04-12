@@ -80,7 +80,6 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AutocompleteApi* | [**get_v1_autocomplete**](docs/AutocompleteApi.md#get_v1_autocomplete) | **GET** /v1/autocomplete | Returns a list of suggestions based on search prefix.
 *AutocompleteApi* | [**post_v1_autocomplete**](docs/AutocompleteApi.md#post_v1_autocomplete) | **POST** /v1/autocomplete | Returns a list of suggestions based on search prefix.
-*LookupApi* | [**get_v1_lookup_by_id**](docs/LookupApi.md#get_v1_lookup_by_id) | **GET** /v1/lookup/{design_id} | Returns a published designs based on id.
 *RelatedApi* | [**get_v1_related_search**](docs/RelatedApi.md#get_v1_related_search) | **GET** /v1/related-search | Gets related searches based on given term
 *RelevancyApi* | [**delete_v1_relevancy_configuration**](docs/RelevancyApi.md#delete_v1_relevancy_configuration) | **DELETE** /v1/relevancy-configurations/{config_id} | Deletes search relevancy configuration.
 *RelevancyApi* | [**get_v1_relevancy_configuration**](docs/RelevancyApi.md#get_v1_relevancy_configuration) | **GET** /v1/relevancy-configurations/{config_id} | Gets a search relevancy configuration.
@@ -111,7 +110,6 @@ Class | Method | HTTP request | Description
  - [EsCompletionSuggestOption](docs/EsCompletionSuggestOption.md)
  - [EsHit](docs/EsHit.md)
  - [EsHits](docs/EsHits.md)
- - [EsLookupResponse](docs/EsLookupResponse.md)
  - [EsSearchResponse](docs/EsSearchResponse.md)
  - [Explain](docs/Explain.md)
  - [RelatedResponse](docs/RelatedResponse.md)
