@@ -43,7 +43,8 @@ class SearchRequestV2(object):
         'explain': 'bool',
         'es_explain': 'bool',
         'relevancy_config_id': 'str',
-        'bucket': 'str'
+        'bucket': 'str',
+        'safe_search': 'bool'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class SearchRequestV2(object):
         'explain': 'explain',
         'es_explain': 'es_explain',
         'relevancy_config_id': 'relevancy_config_id',
-        'bucket': 'bucket'
+        'bucket': 'bucket',
+        'safe_search': 'safe_search'
     }
 
-    def __init__(self, search_terms=None, sort='relevance', tags_filter=None, canvases=None, artist_filter=None, per_page=36, page_offset=1, explain=False, es_explain=False, relevancy_config_id=None, bucket=None, _configuration=None):  # noqa: E501
+    def __init__(self, search_terms=None, sort='relevance', tags_filter=None, canvases=None, artist_filter=None, per_page=36, page_offset=1, explain=False, es_explain=False, relevancy_config_id=None, bucket=None, safe_search=True, _configuration=None):  # noqa: E501
         """SearchRequestV2 - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -77,6 +79,7 @@ class SearchRequestV2(object):
         self._es_explain = None
         self._relevancy_config_id = None
         self._bucket = None
+        self._safe_search = None
         self.discriminator = None
 
         if search_terms is not None:
@@ -101,6 +104,8 @@ class SearchRequestV2(object):
             self.relevancy_config_id = relevancy_config_id
         if bucket is not None:
             self.bucket = bucket
+        if safe_search is not None:
+            self.safe_search = safe_search
 
     @property
     def search_terms(self):
@@ -361,6 +366,29 @@ class SearchRequestV2(object):
         """
 
         self._bucket = bucket
+
+    @property
+    def safe_search(self):
+        """Gets the safe_search of this SearchRequestV2.  # noqa: E501
+
+        whether we include mature designs in search results.  # noqa: E501
+
+        :return: The safe_search of this SearchRequestV2.  # noqa: E501
+        :rtype: bool
+        """
+        return self._safe_search
+
+    @safe_search.setter
+    def safe_search(self, safe_search):
+        """Sets the safe_search of this SearchRequestV2.
+
+        whether we include mature designs in search results.  # noqa: E501
+
+        :param safe_search: The safe_search of this SearchRequestV2.  # noqa: E501
+        :type: bool
+        """
+
+        self._safe_search = safe_search
 
     def to_dict(self):
         """Returns the model properties as a dict"""
