@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_v1_design_tags**](TagApi.md#get_v1_design_tags) | **GET** /v1/design-tags | Gets tags for a design
 [**get_v1_related_tags**](TagApi.md#get_v1_related_tags) | **GET** /v1/related-tags | Gets related tags based on given term(s)
+[**get_v1_tag_parent_child_mapping**](TagApi.md#get_v1_tag_parent_child_mapping) | **GET** /v1/tag-parent-child-mapping | Gets tag mapping for a seed tag or normalized search term
 [**get_v1_tag_suggestions**](TagApi.md#get_v1_tag_suggestions) | **GET** /v1/tag-suggestions | Returns a list of tag suggestions based on search prefix.
 [**get_v1_tags**](TagApi.md#get_v1_tags) | **GET** /v1/tags | Gets tags data based on name(s)
 
@@ -114,6 +115,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RelatedTagResponse**](RelatedTagResponse.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_v1_tag_parent_child_mapping**
+> TagMappingResponse get_v1_tag_parent_child_mapping(seed_tag)
+
+Gets tag mapping for a seed tag or normalized search term
+
+Gets tag mapping for a seed tag or normalized search term
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.TagApi(swagger_client.ApiClient(configuration))
+seed_tag = 'seed_tag_example' # str | seed tag or normalized search term
+
+try:
+    # Gets tag mapping for a seed tag or normalized search term
+    api_response = api_instance.get_v1_tag_parent_child_mapping(seed_tag)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling TagApi->get_v1_tag_parent_child_mapping: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **seed_tag** | **str**| seed tag or normalized search term | 
+
+### Return type
+
+[**TagMappingResponse**](TagMappingResponse.md)
 
 ### Authorization
 
