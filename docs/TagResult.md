@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **str** | tag name | [optional] 
 **taggings** | **int** | taggings count | [optional] 
 **discoverable_taggings** | **int** | discoverable design taggings count | [optional] 
+**mature** | **bool** | mature | [optional] 
 **suggestable** | **bool** | suggestable | [optional] 
 **canonical** | **bool** | canonical | [optional] 
 **relatable** | **bool** | relatable | [optional] 
