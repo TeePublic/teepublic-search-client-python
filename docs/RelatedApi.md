@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_v1_related_search**
-> RelatedResponse get_v1_related_search(search_term)
+> RelatedResponse get_v1_related_search(search_term, bucket=bucket)
 
 Gets related searches based on given term
 
@@ -31,10 +31,11 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.RelatedApi(swagger_client.ApiClient(configuration))
 search_term = 'search_term_example' # str | Search term to pull related searches from
+bucket = 'default' # str | AB test bucket (optional) (default to default)
 
 try:
     # Gets related searches based on given term
-    api_response = api_instance.get_v1_related_search(search_term)
+    api_response = api_instance.get_v1_related_search(search_term, bucket=bucket)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RelatedApi->get_v1_related_search: %s\n" % e)
@@ -45,6 +46,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **search_term** | **str**| Search term to pull related searches from | 
+ **bucket** | **str**| AB test bucket | [optional] [default to default]
 
 ### Return type
 
