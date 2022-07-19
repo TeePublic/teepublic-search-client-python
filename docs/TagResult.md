@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **deleted** | **bool** | deleted | [optional] 
 **child_count** | **int** | number of children tags | [optional] 
 **parent_name** | **str** | name of parent tag | [optional] 
+**linkable** | **bool** | allowed to be a link | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
