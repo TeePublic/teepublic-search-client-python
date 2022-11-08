@@ -36,6 +36,7 @@ class SearchResponse(object):
         'max_score': 'float',
         'total': 'int',
         'explain': 'Explain',
+        'dym_suggest': 'str',
         'designs': 'list[DesignSlim]'
     }
 
@@ -43,10 +44,11 @@ class SearchResponse(object):
         'max_score': 'max_score',
         'total': 'total',
         'explain': 'explain',
+        'dym_suggest': 'dym_suggest',
         'designs': 'designs'
     }
 
-    def __init__(self, max_score=None, total=None, explain=None, designs=None, _configuration=None):  # noqa: E501
+    def __init__(self, max_score=None, total=None, explain=None, dym_suggest=None, designs=None, _configuration=None):  # noqa: E501
         """SearchResponse - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -55,6 +57,7 @@ class SearchResponse(object):
         self._max_score = None
         self._total = None
         self._explain = None
+        self._dym_suggest = None
         self._designs = None
         self.discriminator = None
 
@@ -64,6 +67,8 @@ class SearchResponse(object):
             self.total = total
         if explain is not None:
             self.explain = explain
+        if dym_suggest is not None:
+            self.dym_suggest = dym_suggest
         if designs is not None:
             self.designs = designs
 
@@ -133,6 +138,29 @@ class SearchResponse(object):
         """
 
         self._explain = explain
+
+    @property
+    def dym_suggest(self):
+        """Gets the dym_suggest of this SearchResponse.  # noqa: E501
+
+        did you mean spell suggestion.  # noqa: E501
+
+        :return: The dym_suggest of this SearchResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._dym_suggest
+
+    @dym_suggest.setter
+    def dym_suggest(self, dym_suggest):
+        """Sets the dym_suggest of this SearchResponse.
+
+        did you mean spell suggestion.  # noqa: E501
+
+        :param dym_suggest: The dym_suggest of this SearchResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._dym_suggest = dym_suggest
 
     @property
     def designs(self):

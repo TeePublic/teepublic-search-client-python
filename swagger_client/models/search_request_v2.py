@@ -44,6 +44,7 @@ class SearchRequestV2(object):
         'es_explain': 'bool',
         'relevancy_config_id': 'str',
         'bucket': 'str',
+        'did_you_mean': 'bool',
         'safe_search': 'bool',
         'type': 'str'
     }
@@ -60,11 +61,12 @@ class SearchRequestV2(object):
         'es_explain': 'es_explain',
         'relevancy_config_id': 'relevancy_config_id',
         'bucket': 'bucket',
+        'did_you_mean': 'did_you_mean',
         'safe_search': 'safe_search',
         'type': 'type'
     }
 
-    def __init__(self, search_terms=None, sort='relevance', tags_filter=None, canvases=None, artist_filter=None, per_page=36, page_offset=1, explain=False, es_explain=False, relevancy_config_id=None, bucket=None, safe_search=True, type='site-search', _configuration=None):  # noqa: E501
+    def __init__(self, search_terms=None, sort='relevance', tags_filter=None, canvases=None, artist_filter=None, per_page=36, page_offset=1, explain=False, es_explain=False, relevancy_config_id=None, bucket=None, did_you_mean=True, safe_search=True, type='site-search', _configuration=None):  # noqa: E501
         """SearchRequestV2 - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -81,6 +83,7 @@ class SearchRequestV2(object):
         self._es_explain = None
         self._relevancy_config_id = None
         self._bucket = None
+        self._did_you_mean = None
         self._safe_search = None
         self._type = None
         self.discriminator = None
@@ -107,6 +110,8 @@ class SearchRequestV2(object):
             self.relevancy_config_id = relevancy_config_id
         if bucket is not None:
             self.bucket = bucket
+        if did_you_mean is not None:
+            self.did_you_mean = did_you_mean
         if safe_search is not None:
             self.safe_search = safe_search
         if type is not None:
@@ -371,6 +376,29 @@ class SearchRequestV2(object):
         """
 
         self._bucket = bucket
+
+    @property
+    def did_you_mean(self):
+        """Gets the did_you_mean of this SearchRequestV2.  # noqa: E501
+
+        whether we include did you mean suggestions in search results.  # noqa: E501
+
+        :return: The did_you_mean of this SearchRequestV2.  # noqa: E501
+        :rtype: bool
+        """
+        return self._did_you_mean
+
+    @did_you_mean.setter
+    def did_you_mean(self, did_you_mean):
+        """Sets the did_you_mean of this SearchRequestV2.
+
+        whether we include did you mean suggestions in search results.  # noqa: E501
+
+        :param did_you_mean: The did_you_mean of this SearchRequestV2.  # noqa: E501
+        :type: bool
+        """
+
+        self._did_you_mean = did_you_mean
 
     @property
     def safe_search(self):
