@@ -35,8 +35,6 @@ class TagResult(object):
     swagger_types = {
         'id': 'str',
         'name': 'str',
-        'taggings': 'int',
-        'discoverable_taggings': 'int',
         'mature': 'bool',
         'suggestable': 'bool',
         'canonical': 'bool',
@@ -50,8 +48,6 @@ class TagResult(object):
     attribute_map = {
         'id': '_id',
         'name': 'name',
-        'taggings': 'taggings',
-        'discoverable_taggings': 'discoverable_taggings',
         'mature': 'mature',
         'suggestable': 'suggestable',
         'canonical': 'canonical',
@@ -62,7 +58,7 @@ class TagResult(object):
         'linkable': 'linkable'
     }
 
-    def __init__(self, id=None, name=None, taggings=None, discoverable_taggings=None, mature=None, suggestable=None, canonical=None, relatable=None, deleted=None, child_count=None, parent_name=None, linkable=None, _configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, mature=None, suggestable=None, canonical=None, relatable=None, deleted=None, child_count=None, parent_name=None, linkable=None, _configuration=None):  # noqa: E501
         """TagResult - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -70,8 +66,6 @@ class TagResult(object):
 
         self._id = None
         self._name = None
-        self._taggings = None
-        self._discoverable_taggings = None
         self._mature = None
         self._suggestable = None
         self._canonical = None
@@ -86,10 +80,6 @@ class TagResult(object):
             self.id = id
         if name is not None:
             self.name = name
-        if taggings is not None:
-            self.taggings = taggings
-        if discoverable_taggings is not None:
-            self.discoverable_taggings = discoverable_taggings
         if mature is not None:
             self.mature = mature
         if suggestable is not None:
@@ -152,52 +142,6 @@ class TagResult(object):
         """
 
         self._name = name
-
-    @property
-    def taggings(self):
-        """Gets the taggings of this TagResult.  # noqa: E501
-
-        taggings count  # noqa: E501
-
-        :return: The taggings of this TagResult.  # noqa: E501
-        :rtype: int
-        """
-        return self._taggings
-
-    @taggings.setter
-    def taggings(self, taggings):
-        """Sets the taggings of this TagResult.
-
-        taggings count  # noqa: E501
-
-        :param taggings: The taggings of this TagResult.  # noqa: E501
-        :type: int
-        """
-
-        self._taggings = taggings
-
-    @property
-    def discoverable_taggings(self):
-        """Gets the discoverable_taggings of this TagResult.  # noqa: E501
-
-        discoverable design taggings count  # noqa: E501
-
-        :return: The discoverable_taggings of this TagResult.  # noqa: E501
-        :rtype: int
-        """
-        return self._discoverable_taggings
-
-    @discoverable_taggings.setter
-    def discoverable_taggings(self, discoverable_taggings):
-        """Sets the discoverable_taggings of this TagResult.
-
-        discoverable design taggings count  # noqa: E501
-
-        :param discoverable_taggings: The discoverable_taggings of this TagResult.  # noqa: E501
-        :type: int
-        """
-
-        self._discoverable_taggings = discoverable_taggings
 
     @property
     def mature(self):

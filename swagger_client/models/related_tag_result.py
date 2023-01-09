@@ -36,21 +36,17 @@ class RelatedTagResult(object):
         'name': 'str',
         'deleted': 'bool',
         'weight': 'float',
-        'linkable': 'bool',
-        'discoverable_taggings': 'int',
-        'taggings': 'int'
+        'linkable': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
         'deleted': 'deleted',
         'weight': 'weight',
-        'linkable': 'linkable',
-        'discoverable_taggings': 'discoverable_taggings',
-        'taggings': 'taggings'
+        'linkable': 'linkable'
     }
 
-    def __init__(self, name=None, deleted=None, weight=None, linkable=None, discoverable_taggings=None, taggings=None, _configuration=None):  # noqa: E501
+    def __init__(self, name=None, deleted=None, weight=None, linkable=None, _configuration=None):  # noqa: E501
         """RelatedTagResult - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -60,8 +56,6 @@ class RelatedTagResult(object):
         self._deleted = None
         self._weight = None
         self._linkable = None
-        self._discoverable_taggings = None
-        self._taggings = None
         self.discriminator = None
 
         if name is not None:
@@ -72,10 +66,6 @@ class RelatedTagResult(object):
             self.weight = weight
         if linkable is not None:
             self.linkable = linkable
-        if discoverable_taggings is not None:
-            self.discoverable_taggings = discoverable_taggings
-        if taggings is not None:
-            self.taggings = taggings
 
     @property
     def name(self):
@@ -168,52 +158,6 @@ class RelatedTagResult(object):
         """
 
         self._linkable = linkable
-
-    @property
-    def discoverable_taggings(self):
-        """Gets the discoverable_taggings of this RelatedTagResult.  # noqa: E501
-
-        discoverable design taggings count  # noqa: E501
-
-        :return: The discoverable_taggings of this RelatedTagResult.  # noqa: E501
-        :rtype: int
-        """
-        return self._discoverable_taggings
-
-    @discoverable_taggings.setter
-    def discoverable_taggings(self, discoverable_taggings):
-        """Sets the discoverable_taggings of this RelatedTagResult.
-
-        discoverable design taggings count  # noqa: E501
-
-        :param discoverable_taggings: The discoverable_taggings of this RelatedTagResult.  # noqa: E501
-        :type: int
-        """
-
-        self._discoverable_taggings = discoverable_taggings
-
-    @property
-    def taggings(self):
-        """Gets the taggings of this RelatedTagResult.  # noqa: E501
-
-        Number of taggings  # noqa: E501
-
-        :return: The taggings of this RelatedTagResult.  # noqa: E501
-        :rtype: int
-        """
-        return self._taggings
-
-    @taggings.setter
-    def taggings(self, taggings):
-        """Sets the taggings of this RelatedTagResult.
-
-        Number of taggings  # noqa: E501
-
-        :param taggings: The taggings of this RelatedTagResult.  # noqa: E501
-        :type: int
-        """
-
-        self._taggings = taggings
 
     def to_dict(self):
         """Returns the model properties as a dict"""
