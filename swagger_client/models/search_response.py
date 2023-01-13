@@ -38,7 +38,7 @@ class SearchResponse(object):
         'explain': 'Explain',
         'dym_suggest': 'str',
         'designs': 'list[DesignSlim]',
-        'promoted_filters': 'list[str]'
+        'promoted_filters_suggest': 'list[str]'
     }
 
     attribute_map = {
@@ -47,10 +47,10 @@ class SearchResponse(object):
         'explain': 'explain',
         'dym_suggest': 'dym_suggest',
         'designs': 'designs',
-        'promoted_filters': 'promoted_filters'
+        'promoted_filters_suggest': 'promoted_filters_suggest'
     }
 
-    def __init__(self, max_score=None, total=None, explain=None, dym_suggest=None, designs=None, promoted_filters=None, _configuration=None):  # noqa: E501
+    def __init__(self, max_score=None, total=None, explain=None, dym_suggest=None, designs=None, promoted_filters_suggest=None, _configuration=None):  # noqa: E501
         """SearchResponse - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -61,7 +61,7 @@ class SearchResponse(object):
         self._explain = None
         self._dym_suggest = None
         self._designs = None
-        self._promoted_filters = None
+        self._promoted_filters_suggest = None
         self.discriminator = None
 
         if max_score is not None:
@@ -74,8 +74,8 @@ class SearchResponse(object):
             self.dym_suggest = dym_suggest
         if designs is not None:
             self.designs = designs
-        if promoted_filters is not None:
-            self.promoted_filters = promoted_filters
+        if promoted_filters_suggest is not None:
+            self.promoted_filters_suggest = promoted_filters_suggest
 
     @property
     def max_score(self):
@@ -191,27 +191,27 @@ class SearchResponse(object):
         self._designs = designs
 
     @property
-    def promoted_filters(self):
-        """Gets the promoted_filters of this SearchResponse.  # noqa: E501
+    def promoted_filters_suggest(self):
+        """Gets the promoted_filters_suggest of this SearchResponse.  # noqa: E501
 
-        A list of query refinements.  # noqa: E501
+        List of terms that may be used to further refine the result set.  # noqa: E501
 
-        :return: The promoted_filters of this SearchResponse.  # noqa: E501
+        :return: The promoted_filters_suggest of this SearchResponse.  # noqa: E501
         :rtype: list[str]
         """
-        return self._promoted_filters
+        return self._promoted_filters_suggest
 
-    @promoted_filters.setter
-    def promoted_filters(self, promoted_filters):
-        """Sets the promoted_filters of this SearchResponse.
+    @promoted_filters_suggest.setter
+    def promoted_filters_suggest(self, promoted_filters_suggest):
+        """Sets the promoted_filters_suggest of this SearchResponse.
 
-        A list of query refinements.  # noqa: E501
+        List of terms that may be used to further refine the result set.  # noqa: E501
 
-        :param promoted_filters: The promoted_filters of this SearchResponse.  # noqa: E501
+        :param promoted_filters_suggest: The promoted_filters_suggest of this SearchResponse.  # noqa: E501
         :type: list[str]
         """
 
-        self._promoted_filters = promoted_filters
+        self._promoted_filters_suggest = promoted_filters_suggest
 
     def to_dict(self):
         """Returns the model properties as a dict"""

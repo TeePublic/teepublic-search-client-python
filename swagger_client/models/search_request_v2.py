@@ -462,7 +462,7 @@ class SearchRequestV2(object):
     def promoted_filters(self):
         """Gets the promoted_filters of this SearchRequestV2.  # noqa: E501
 
-        List of terms used to further refine a query.  # noqa: E501
+        List of terms used to further refine the result set.  # noqa: E501
 
         :return: The promoted_filters of this SearchRequestV2.  # noqa: E501
         :rtype: list[str]
@@ -473,7 +473,7 @@ class SearchRequestV2(object):
     def promoted_filters(self, promoted_filters):
         """Sets the promoted_filters of this SearchRequestV2.
 
-        List of terms used to further refine a query.  # noqa: E501
+        List of terms used to further refine the result set.  # noqa: E501
 
         :param promoted_filters: The promoted_filters of this SearchRequestV2.  # noqa: E501
         :type: list[str]
