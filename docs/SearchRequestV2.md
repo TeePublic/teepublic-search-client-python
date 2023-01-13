@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **did_you_mean** | **bool** | whether we include did you mean suggestions in search results. | [optional] [default to True]
 **safe_search** | **bool** | whether we include mature designs in search results. | [optional] [default to True]
 **type** | **str** | Type of search to execute | [optional] [default to 'site-search']
+**promoted_filters** | **list[str]** | List of terms used to further refine the result set. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
