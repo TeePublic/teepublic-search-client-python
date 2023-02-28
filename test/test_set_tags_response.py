@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.models.related_tag_object import RelatedTagObject  # noqa: E501
+from swagger_client.models.set_tags_response import SetTagsResponse  # noqa: E501
 from swagger_client.rest import ApiException
 
 
-class TestRelatedTagObject(unittest.TestCase):
-    """RelatedTagObject unit test stubs"""
+class TestSetTagsResponse(unittest.TestCase):
+    """SetTagsResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestRelatedTagObject(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRelatedTagObject(self):
-        """Test RelatedTagObject"""
+    def testSetTagsResponse(self):
+        """Test SetTagsResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.related_tag_object.RelatedTagObject()  # noqa: E501
+        # model = swagger_client.models.set_tags_response.SetTagsResponse()  # noqa: E501
         pass
 
 
