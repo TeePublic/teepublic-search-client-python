@@ -64,8 +64,10 @@ class SetDesignTaggingsObject(object):
         self.design_id = design_id
         self.discoverable = discoverable
         self.discoverable_before = discoverable_before
-        self.primary = primary
-        self.secondary = secondary
+        if primary is not None:
+            self.primary = primary
+        if secondary is not None:
+            self.secondary = secondary
 
     @property
     def design_id(self):
@@ -162,8 +164,6 @@ class SetDesignTaggingsObject(object):
         :param primary: The primary of this SetDesignTaggingsObject.  # noqa: E501
         :type: str
         """
-        if self._configuration.client_side_validation and primary is None:
-            raise ValueError("Invalid value for `primary`, must not be `None`")  # noqa: E501
 
         self._primary = primary
 
@@ -187,8 +187,6 @@ class SetDesignTaggingsObject(object):
         :param secondary: The secondary of this SetDesignTaggingsObject.  # noqa: E501
         :type: list[str]
         """
-        if self._configuration.client_side_validation and secondary is None:
-            raise ValueError("Invalid value for `secondary`, must not be `None`")  # noqa: E501
 
         self._secondary = secondary
 
