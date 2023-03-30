@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **design_id** | **int** | design id | 
 **discoverable** | **bool** | true if the design is discoverable | 
-**discoverable_before** | **bool** | true if the design was already discoverable | 
 **primary** | **str** | primary tag name | [optional] 
 **secondary** | **list[str]** | secondary tag names | [optional] 
 
