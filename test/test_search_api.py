@@ -36,6 +36,13 @@ class TestSearchApi(unittest.TestCase):
         """
         pass
 
+    def test_post_v1_category_search(self):
+        """Test case for post_v1_category_search
+
+        Endpoint to retrieve discoverable designs associated with a given category.  # noqa: E501
+        """
+        pass
+
     def test_post_v2_dmca_search(self):
         """Test case for post_v2_dmca_search
 
