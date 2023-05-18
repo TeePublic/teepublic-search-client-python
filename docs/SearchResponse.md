@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **dym_suggest** | **str** | did you mean spell suggestion. | [optional] 
 **designs** | [**list[DesignSlim]**](DesignSlim.md) | list of designs. | [optional] 
 **promoted_filters_suggest** | **list[str]** | List of terms that may be used to further refine the result set. | [optional] 
+**x_supplemental** | **object** | may contain experimental supplemental response information. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
