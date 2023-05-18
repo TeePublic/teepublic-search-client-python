@@ -38,7 +38,8 @@ class SearchResponse(object):
         'explain': 'Explain',
         'dym_suggest': 'str',
         'designs': 'list[DesignSlim]',
-        'promoted_filters_suggest': 'list[str]'
+        'promoted_filters_suggest': 'list[str]',
+        'x_supplemental': 'object'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class SearchResponse(object):
         'explain': 'explain',
         'dym_suggest': 'dym_suggest',
         'designs': 'designs',
-        'promoted_filters_suggest': 'promoted_filters_suggest'
+        'promoted_filters_suggest': 'promoted_filters_suggest',
+        'x_supplemental': 'x_supplemental'
     }
 
-    def __init__(self, max_score=None, total=None, explain=None, dym_suggest=None, designs=None, promoted_filters_suggest=None, _configuration=None):  # noqa: E501
+    def __init__(self, max_score=None, total=None, explain=None, dym_suggest=None, designs=None, promoted_filters_suggest=None, x_supplemental=None, _configuration=None):  # noqa: E501
         """SearchResponse - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -62,6 +64,7 @@ class SearchResponse(object):
         self._dym_suggest = None
         self._designs = None
         self._promoted_filters_suggest = None
+        self._x_supplemental = None
         self.discriminator = None
 
         if max_score is not None:
@@ -76,6 +79,8 @@ class SearchResponse(object):
             self.designs = designs
         if promoted_filters_suggest is not None:
             self.promoted_filters_suggest = promoted_filters_suggest
+        if x_supplemental is not None:
+            self.x_supplemental = x_supplemental
 
     @property
     def max_score(self):
@@ -212,6 +217,29 @@ class SearchResponse(object):
         """
 
         self._promoted_filters_suggest = promoted_filters_suggest
+
+    @property
+    def x_supplemental(self):
+        """Gets the x_supplemental of this SearchResponse.  # noqa: E501
+
+        may contain experimental supplemental response information.  # noqa: E501
+
+        :return: The x_supplemental of this SearchResponse.  # noqa: E501
+        :rtype: object
+        """
+        return self._x_supplemental
+
+    @x_supplemental.setter
+    def x_supplemental(self, x_supplemental):
+        """Sets the x_supplemental of this SearchResponse.
+
+        may contain experimental supplemental response information.  # noqa: E501
+
+        :param x_supplemental: The x_supplemental of this SearchResponse.  # noqa: E501
+        :type: object
+        """
+
+        self._x_supplemental = x_supplemental
 
     def to_dict(self):
         """Returns the model properties as a dict"""
