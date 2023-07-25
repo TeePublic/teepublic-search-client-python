@@ -35,18 +35,16 @@ class RelatedResult(object):
     swagger_types = {
         'result': 'str',
         'score': 'float',
-        'linkable_to_tag_page': 'bool',
-        'is_override': 'bool'
+        'linkable_to_tag_page': 'bool'
     }
 
     attribute_map = {
         'result': 'result',
         'score': 'score',
-        'linkable_to_tag_page': 'linkable_to_tag_page',
-        'is_override': 'is_override'
+        'linkable_to_tag_page': 'linkable_to_tag_page'
     }
 
-    def __init__(self, result=None, score=None, linkable_to_tag_page=None, is_override=None, _configuration=None):  # noqa: E501
+    def __init__(self, result=None, score=None, linkable_to_tag_page=None, _configuration=None):  # noqa: E501
         """RelatedResult - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -55,7 +53,6 @@ class RelatedResult(object):
         self._result = None
         self._score = None
         self._linkable_to_tag_page = None
-        self._is_override = None
         self.discriminator = None
 
         if result is not None:
@@ -64,8 +61,6 @@ class RelatedResult(object):
             self.score = score
         if linkable_to_tag_page is not None:
             self.linkable_to_tag_page = linkable_to_tag_page
-        if is_override is not None:
-            self.is_override = is_override
 
     @property
     def result(self):
@@ -135,29 +130,6 @@ class RelatedResult(object):
         """
 
         self._linkable_to_tag_page = linkable_to_tag_page
-
-    @property
-    def is_override(self):
-        """Gets the is_override of this RelatedResult.  # noqa: E501
-
-        Flag to indicate if suggesstion is an override  # noqa: E501
-
-        :return: The is_override of this RelatedResult.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_override
-
-    @is_override.setter
-    def is_override(self, is_override):
-        """Sets the is_override of this RelatedResult.
-
-        Flag to indicate if suggesstion is an override  # noqa: E501
-
-        :param is_override: The is_override of this RelatedResult.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_override = is_override
 
     def to_dict(self):
         """Returns the model properties as a dict"""
