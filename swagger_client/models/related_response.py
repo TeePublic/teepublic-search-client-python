@@ -108,7 +108,7 @@ class RelatedResponse(object):
     def is_override(self):
         """Gets the is_override of this RelatedResponse.  # noqa: E501
 
-        Flag to indicate if suggesstions are overrides  # noqa: E501
+        Flag to indicate if suggestions are overrides  # noqa: E501
 
         :return: The is_override of this RelatedResponse.  # noqa: E501
         :rtype: bool
@@ -119,7 +119,7 @@ class RelatedResponse(object):
     def is_override(self, is_override):
         """Sets the is_override of this RelatedResponse.
 
-        Flag to indicate if suggesstions are overrides  # noqa: E501
+        Flag to indicate if suggestions are overrides  # noqa: E501
 
         :param is_override: The is_override of this RelatedResponse.  # noqa: E501
         :type: bool
