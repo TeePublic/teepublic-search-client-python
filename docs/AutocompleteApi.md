@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_v1_autocomplete**
-> AutocompleteResponse get_v1_autocomplete(prefix, limit=limit, explain=explain)
+> AutocompleteResponse get_v1_autocomplete(prefix, limit=limit, explain=explain, bucket=bucket)
 
 Returns a list of suggestions based on search prefix.
 
@@ -34,10 +34,11 @@ api_instance = swagger_client.AutocompleteApi(swagger_client.ApiClient(configura
 prefix = 'prefix_example' # str | search prefix
 limit = 6 # int | Number of results to return. (optional) (default to 6)
 explain = false # bool | Whether to return explanation of results. (optional) (default to false)
+bucket = 'default' # str | AB test bucket (optional) (default to default)
 
 try:
     # Returns a list of suggestions based on search prefix.
-    api_response = api_instance.get_v1_autocomplete(prefix, limit=limit, explain=explain)
+    api_response = api_instance.get_v1_autocomplete(prefix, limit=limit, explain=explain, bucket=bucket)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AutocompleteApi->get_v1_autocomplete: %s\n" % e)
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
  **prefix** | **str**| search prefix | 
  **limit** | **int**| Number of results to return. | [optional] [default to 6]
  **explain** | **bool**| Whether to return explanation of results. | [optional] [default to false]
+ **bucket** | **str**| AB test bucket | [optional] [default to default]
 
 ### Return type
 
