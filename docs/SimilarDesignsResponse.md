@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **total** | **int** | total number of documents matching our search criteria. | [optional] 
 **explain** | [**Explain**](Explain.md) |  | [optional] 
 **designs** | [**list[DesignSlim]**](DesignSlim.md) | list of designs. | [optional] 
+**x_supplemental** | **object** | may contain experimental supplemental response information. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

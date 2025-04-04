@@ -4,15 +4,15 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**post_v1_similar_designs**](DesignsApi.md#post_v1_similar_designs) | **POST** /v1/similar-designs | Returns a list of discoverable designs based on the query of a design&#39;s primary tag.
+[**post_v1_similar_designs**](DesignsApi.md#post_v1_similar_designs) | **POST** /v1/similar-designs | Returns a list of discoverable designs based on a reference design and/or primary tag.
 
 
 # **post_v1_similar_designs**
 > SimilarDesignsResponse post_v1_similar_designs(body)
 
-Returns a list of discoverable designs based on the query of a design's primary tag.
+Returns a list of discoverable designs based on a reference design and/or primary tag.
 
-Returns a list of discoverable designs based on the query of a design's primary tag.
+Returns a list of discoverable designs based on a reference design and/or primary tag.
 
 ### Example
 ```python
@@ -33,7 +33,7 @@ api_instance = swagger_client.DesignsApi(swagger_client.ApiClient(configuration)
 body = swagger_client.SimilarDesignsRequestV1() # SimilarDesignsRequestV1 | Similar Designs Request
 
 try:
-    # Returns a list of discoverable designs based on the query of a design's primary tag.
+    # Returns a list of discoverable designs based on a reference design and/or primary tag.
     api_response = api_instance.post_v1_similar_designs(body)
     pprint(api_response)
 except ApiException as e:
