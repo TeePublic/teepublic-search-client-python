@@ -136,7 +136,7 @@ class RelatedResponse(object):
     def last_editor(self):
         """Gets the last_editor of this RelatedResponse.  # noqa: E501
 
-        Email of user who last edited the tag  # noqa: E501
+        \"auto\" for automatically generated suggestions, email of user who last edited the suggestions otherwise   # noqa: E501
 
         :return: The last_editor of this RelatedResponse.  # noqa: E501
         :rtype: str
@@ -147,7 +147,7 @@ class RelatedResponse(object):
     def last_editor(self, last_editor):
         """Sets the last_editor of this RelatedResponse.
 
-        Email of user who last edited the tag  # noqa: E501
+        \"auto\" for automatically generated suggestions, email of user who last edited the suggestions otherwise   # noqa: E501
 
         :param last_editor: The last_editor of this RelatedResponse.  # noqa: E501
         :type: str

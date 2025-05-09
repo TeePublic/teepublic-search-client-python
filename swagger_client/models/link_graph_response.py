@@ -36,7 +36,7 @@ class LinkGraphResponse(object):
         'status': 'str',
         'canonical_parent': 'str',
         'override': 'bool',
-        'related_searches': 'list[RelatedResponse]'
+        'related_searches': 'RelatedResponse'
     }
 
     attribute_map = {
@@ -149,7 +149,7 @@ class LinkGraphResponse(object):
 
 
         :return: The related_searches of this LinkGraphResponse.  # noqa: E501
-        :rtype: list[RelatedResponse]
+        :rtype: RelatedResponse
         """
         return self._related_searches
 
@@ -159,7 +159,7 @@ class LinkGraphResponse(object):
 
 
         :param related_searches: The related_searches of this LinkGraphResponse.  # noqa: E501
-        :type: list[RelatedResponse]
+        :type: RelatedResponse
         """
 
         self._related_searches = related_searches
