@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ref_anonymous_id** | **str** | reference anonymous user id | [optional] 
 **ref_design_id** | **int** | reference design id | [optional] 
 **search_terms** | **str** | Search terms. | [optional] 
 **sort** | **str** | Sort order | [optional] [default to 'relevance']
