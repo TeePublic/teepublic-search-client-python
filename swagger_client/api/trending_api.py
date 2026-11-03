@@ -64,12 +64,13 @@ class TrendingApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str region: US state code (e.g. CA). Omit for the national list.
         :return: list[TrendingResult]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['region']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -90,6 +91,8 @@ class TrendingApi(object):
         path_params = {}
 
         query_params = []
+        if 'region' in params:
+            query_params.append(('region', params['region']))  # noqa: E501
 
         header_params = {}
 

@@ -34,15 +34,17 @@ class TrendingRequest(object):
     """
     swagger_types = {
         'batch_id': 'str',
-        'results': 'list[TrendingResult]'
+        'results': 'list[TrendingResult]',
+        'region': 'str'
     }
 
     attribute_map = {
         'batch_id': 'batch_id',
-        'results': 'results'
+        'results': 'results',
+        'region': 'region'
     }
 
-    def __init__(self, batch_id=None, results=None, _configuration=None):  # noqa: E501
+    def __init__(self, batch_id=None, results=None, region=None, _configuration=None):  # noqa: E501
         """TrendingRequest - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -50,12 +52,15 @@ class TrendingRequest(object):
 
         self._batch_id = None
         self._results = None
+        self._region = None
         self.discriminator = None
 
         if batch_id is not None:
             self.batch_id = batch_id
         if results is not None:
             self.results = results
+        if region is not None:
+            self.region = region
 
     @property
     def batch_id(self):
@@ -102,6 +107,29 @@ class TrendingRequest(object):
         """
 
         self._results = results
+
+    @property
+    def region(self):
+        """Gets the region of this TrendingRequest.  # noqa: E501
+
+        US state code (e.g. CA) the results are for. Omit for the national list.  # noqa: E501
+
+        :return: The region of this TrendingRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._region
+
+    @region.setter
+    def region(self, region):
+        """Sets the region of this TrendingRequest.
+
+        US state code (e.g. CA) the results are for. Omit for the national list.  # noqa: E501
+
+        :param region: The region of this TrendingRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._region = region
 
     def to_dict(self):
         """Returns the model properties as a dict"""
