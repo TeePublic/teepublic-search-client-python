@@ -64,7 +64,7 @@ class TrendingApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str region: US state code (e.g. CA). Omit for the national list.
+        :param str region: Region code in ISO 3166-2 format (e.g. US-CA). Omit for the global list.
         :return: list[TrendingResult]
                  If the method is called asynchronously,
                  returns the request thread.

@@ -112,7 +112,7 @@ class TrendingRequest(object):
     def region(self):
         """Gets the region of this TrendingRequest.  # noqa: E501
 
-        US state code (e.g. CA) the results are for. Omit for the national list.  # noqa: E501
+        Region code in ISO 3166-2 format (e.g. US-CA) the results are for. Omit for the global list.  # noqa: E501
 
         :return: The region of this TrendingRequest.  # noqa: E501
         :rtype: str
@@ -123,7 +123,7 @@ class TrendingRequest(object):
     def region(self, region):
         """Sets the region of this TrendingRequest.
 
-        US state code (e.g. CA) the results are for. Omit for the national list.  # noqa: E501
+        Region code in ISO 3166-2 format (e.g. US-CA) the results are for. Omit for the global list.  # noqa: E501
 
         :param region: The region of this TrendingRequest.  # noqa: E501
         :type: str
