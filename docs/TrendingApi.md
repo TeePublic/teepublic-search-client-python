@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_v1_trending_search**
-> list[TrendingResult] get_v1_trending_search()
+> list[TrendingResult] get_v1_trending_search(region=region)
 
 Gets trending search results.
 
@@ -31,17 +31,21 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.TrendingApi(swagger_client.ApiClient(configuration))
+region = 'region_example' # str | Region code in ISO 3166-2 format (e.g. US-CA). Omit for the global list. (optional)
 
 try:
     # Gets trending search results.
-    api_response = api_instance.get_v1_trending_search()
+    api_response = api_instance.get_v1_trending_search(region=region)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TrendingApi->get_v1_trending_search: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **str**| Region code in ISO 3166-2 format (e.g. US-CA). Omit for the global list. | [optional] 
 
 ### Return type
 
